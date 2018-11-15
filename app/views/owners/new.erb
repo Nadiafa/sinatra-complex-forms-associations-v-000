@@ -10,5 +10,14 @@
   <br></br>
   
   <label>Pet:</label>
+  
+  <br></br>
+  
+  <% @pets.each do |pet| %>
+    <input type="checkbox" name="owner[pet_ids][]"
+  <% end %>
+  
+  <br></br>
+  
   <input type="submit" value="Create Owner">
 </form>
