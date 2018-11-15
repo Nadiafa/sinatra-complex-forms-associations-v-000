@@ -34,7 +34,7 @@ class PetsController < ApplicationController
       if !@pet.owner 
         @pet.owner = Owner.create(name: params["owner"]["name"]) 
       else 
-        Pet.last.owner.name(params["owner"]["name"])
+        @pet.owner.update(Pet.last.owner.name(params["owner"]["name"]))
       end
     end
     @pet.save
